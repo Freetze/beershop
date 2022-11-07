@@ -1,0 +1,35 @@
+<div class="beer-card-container">
+  <div class="upper-beer-card-container">
+    <div class="beer-img-container" (click)="selectBeer(beer!)">
+      <div class="badges-container">
+        <app-badges></app-badges>
+        <div class="icon-container">
+          <img class="heart-icon" src="assets/img/heart-icon.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="img-container"
+        style="background: url({{ image_url }}) "
+      ></div>
+    </div>
+    <div class="beer-description-container">
+      <small>{{ contributor }}</small>
+      <h5>{{ name }}</h5>
+      <small> {{ tagline }}</small>
+    </div>
+  </div>
+  <div class="bottom-beer-card-container">
+    <div class="beer-price-container">
+      <h3>
+        <small>{{ randomPrice() | currency: 'EUR' }}</small>
+      </h3>
+      <p>Content <small>0.44 Liter</small></p>
+    </div>
+    <form class="beer-button-container" *ngIf="getQuantity() ===0">
+      <input class="input-cont" type="text" placeholder="1" (click)="getQuantity()" />
+      <app-primary-button
+        (click)="addToCart()"
+      ></app-primary-button>
+    </form>
+  </div>
+</div>

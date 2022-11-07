@@ -1,0 +1,25 @@
+<form class="search-box-container" >
+  <input
+    required
+    ngModel
+    [(ngModel)]="phrase"
+    touched
+    name="search"
+    #search="ngModel"
+    minlength="3"
+    class="input-container"
+    type="text"
+    placeholder="Search a Beer..."
+  />
+  <div
+    class="danger-container"
+    *ngIf="search.touched && search.errors?.['minlength']"
+  >
+    <p>Minimum 3 characters required to search</p>
+  </div>
+  <button class="search-button">
+    <img src="assets/img/search.png" alt="" />
+  </button>
+</form>
+
+<!-- *ngFor="let b of filteredBeers" -->

@@ -1,0 +1,139 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.beer-card-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  gap: 16px;
+  width: 302px;
+  height: 467px;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 2px 4px rgba(5, 7, 32, 0.08);
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  .upper-beer-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 270px;
+    height: 306px;
+    align-self: stretch;
+  }
+
+  .beer-img-container {
+    width: 270px;
+    height: 212px;
+    align-self: stretch;
+  }
+
+  .input-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 270px;
+    height: 160px;
+    left: 0px;
+    top: 52px;
+    background-color: $greyscale-very-light-grey !important;
+    background-size: 35px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transition: 1s;
+    caret-color: transparent;
+    cursor: pointer;
+
+    &.img-container:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+  }
+
+  .beer-description-container {
+    width: 270px;
+    height: 78px;
+    flex: none;
+  }
+}
+
+.bottom-beer-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 270px;
+  height: 115px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+
+  .beer-price-container {
+    width: 270px;
+    height: 59px;
+    align-self: stretch;
+  }
+
+  .beer-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 270px;
+    height: 40px;
+
+  }
+
+
+  .quantity {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.badges-container {
+  width: 270px;
+  height: 40px;
+}
+
+.heart-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
